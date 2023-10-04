@@ -60,7 +60,7 @@ class AccountsController extends Controller
 
         // Generate a unique username based on the name
         $username = strtolower(str_replace(' ', '', $request->first_name)); // Convert name to lowercase and remove spaces
-        $username .= '@'.'toddily'.DB::table('Users')->latest()->first()->id + 1; // Append a unique identifier
+        $username .= '@'.'toddily'.DB::table('users')->latest()->first()->id + 1; // Append a unique identifier
 
 
 
