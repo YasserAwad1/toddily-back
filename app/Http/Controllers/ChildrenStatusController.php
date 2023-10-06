@@ -156,7 +156,7 @@ class ChildrenStatusController extends Controller
            foreach ($item as $status){
                array_push($subStatus , $status['substatus'][0]);
            }
-           return ['name' => Status::find($item)->first()->name ,'substatus'=>$subStatus];
+           return ['name' => $status['name'],'status_id' =>$status['status_id'],'substatus'=>$subStatus];
         });
 
         $lastLast=  $last->values();
